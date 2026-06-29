@@ -1,0 +1,96 @@
+site_name: Storing Large, Heterogeneous Data at Scale
+site_description: >-
+  A practical, vendor-neutral reference for storing large, heterogeneous sensor
+  data (images, video, ZED 3D) on self-hosted and air-gapped infrastructure.
+site_author: Italo Salgado
+site_url: https://italosalgado14.github.io/partitioning-data/
+repo_url: https://github.com/italosalgado14/partitioning-data
+repo_name: italosalgado14/partitioning-data
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; Italo Salgado
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+nav:
+  - Home: index.md
+  - The Mental Model: mental-model.md
+  - Key Concepts: key-concepts.md
+  - Storage Options: storage-options.md
+  - Directory Layout: directory-layout.md
+  - Cross-Cutting Concerns: cross-cutting.md
+  - Modality Playbooks: modality.md
+  - Decision Guide: decision-guide.md
+  - Recommended Architecture: architecture.md
+  - Operations & Hardening: operations.md
+  - Migrating an Image Store: migration.md
+  - Reference & Glossary: reference.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.tilde

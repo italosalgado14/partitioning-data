@@ -1,0 +1,5 @@
+# Documentation site dependencies (MkDocs + Material theme).
+# Used by the GitHub Actions deploy workflow and for local previews:
+#   pip install -r requirements-docs.txt
+#   mkdocs serve
+mkdocs-material>=9.5,<10
